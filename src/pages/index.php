@@ -7,9 +7,6 @@ include '../static_component/header.php';
 ?>
     <main>
         <?php
-            echo '<pre>';
-            print_r($_SESSION['id_dresseur']);
-            echo '</pre>';
             if (isset($_SESSION['dresseur'])) {
                     $pokedex = getownGlobalPokedex($mysqli, $_SESSION['dresseur_id']);
                     displayownPokedex($mysqli,$pokedex);
