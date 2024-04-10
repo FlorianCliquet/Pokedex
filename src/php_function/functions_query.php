@@ -1,12 +1,23 @@
 <?php
 
 function getPokedex($mysqli) {
-    $sql = "SELECT pokemon.id_pokemon, pokemon.numero, pokemon.nom, COALESCE(pokedex.nbVue, 0) AS nbVue, COALESCE(pokedex.nbAttrape, 0) AS nbAttrape, GROUP_CONCAT(image.chemin) AS image_paths
-            FROM pokemon
-            LEFT JOIN pokedex ON pokemon.id_pokemon = pokedex.id_pokemon
-            LEFT JOIN image ON pokemon.id_pokemon = image.id_pokemon
-            GROUP BY pokemon.id_pokemon
-            ORDER BY pokemon.numero";
+    $sql = "SELECT 
+                pokemon.id_pokemon,
+                pokemon.numero,
+                pokemon.nom,
+                COALESCE(pokedex.nbVue, 0) AS nbVue,
+                COALESCE(pokedex.nbAttrape, 0) AS nbAttrape,
+                image_paths.image_paths
+            FROM 
+                pokemon
+            LEFT JOIN 
+                pokedex ON pokemon.id_pokemon = pokedex.id_pokemon
+            LEFT JOIN 
+                (SELECT id_pokemon, GROUP_CONCAT(chemin) AS image_paths FROM image GROUP BY id_pokemon) AS image_paths ON pokemon.id_pokemon = image_paths.id_pokemon
+            GROUP BY 
+                pokemon.id_pokemon, pokemon.numero, pokemon.nom, nbVue, nbAttrape
+            ORDER BY 
+                pokemon.numero;";
     $result = $mysqli->query($sql);
     $pokedex = [];
     while ($row = $result->fetch_assoc()) {
