@@ -1,5 +1,4 @@
---------------------------------------------------------------------------------------------------------------[FR]---------------------------------------------------------------------------------------------------------------------------
-
+-------------------------------------------------------------------------------------[FR]---------------------------------------------------------------------------------------------------
 # Pokedex
 
 Ce projet est un Pokedex développé en PHP. Il permet aux utilisateurs de rechercher des informations sur différents Pokémon de la première génération, y compris leurs types et leurs capacités (uniquement les 18 premiers pokémons de la liste). Les utilisateurs connectés peuvent confectionner leur propre Pokedex. Ce projet suit un TP de BDD-IHM avec une base de données imposée, ce qui explique le manque d'informations.
@@ -72,7 +71,7 @@ Ce projet a été développé par [Florian Cliquet].
 
 Ce projet est sous licence MIT. Consultez le fichier LICENSE.md pour plus de détails.
 
---------------------------------------------------------------------------------------------------------------[EN]---------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------[EN]---------------------------------------------------------------------------------------------------
 
 # Pokedex
 
