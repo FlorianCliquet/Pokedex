@@ -65,7 +65,7 @@ Les contributions sont les bienvenues ! Si vous souhaitez améliorer ce projet, 
 
 ## Auteur
 
-Ce projet a été développé par [Florian Cliquet].
+Ce projet a été développé par Florian Cliquet.
 
 ## Licence
 
@@ -139,7 +139,7 @@ Contributions are welcome! If you'd like to improve this project, please follow 
 
 ## Author
 
-This project was developed by [Florian Cliquet].
+This project was developed by Florian Cliquet.
 
 ## License
 
